@@ -4,7 +4,9 @@ public class Main {
 
         NumberText translator = new NumberText();
 
-        translator.toText(5);
+        TextNumber speaker = new TextNumber();
+
+        speaker.toNumber("hey hey one hey");
 
     }
 }

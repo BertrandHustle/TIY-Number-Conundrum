@@ -427,7 +427,6 @@ public class NumberText {
 
         }
 
-        System.out.println(result);
         return result;
     }
 }
