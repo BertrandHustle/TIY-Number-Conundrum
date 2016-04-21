@@ -5,13 +5,17 @@ import java.util.ArrayList;
  */
 public class ArrayBuilder {
 
-    //init arrays
+    //init arrays and convert to strings
 
-    ArrayList<String> ones = new ArrayList<String>();
-    ArrayList<String> tens = new ArrayList<String>();
-    ArrayList<String> teens = new ArrayList<String>();
+    private ArrayList<String> ones = new ArrayList<String>();
+    private ArrayList<String> tens = new ArrayList<String>();
+    private ArrayList<String> teens = new ArrayList<String>();
 
-    public ArrayList arrayBuilder(String arrayName, int beginRange, int endRange) {
+    private String onesPattern = "";
+    private String tensPattern = "";
+    private String teensPattern = "";
+
+    public void arrayBuilder(String arrayName, int beginRange, int endRange) {
 
         for (int i = beginRange; i <= endRange; ++i) {
 
@@ -41,25 +45,52 @@ public class ArrayBuilder {
 
         if (arrayName.equals("ones")) {
 
-            return ones;
+            for (String j : ones) {
+
+                onesPattern += j + "|";
+
+            }
+
+        } else if (arrayName.equals("tens")) {
+
+            for (String k : tens) {
+
+                tensPattern += k + "|";
+
+            }
+
+        } else if (arrayName.equals("teens")) {
+
+            for (String l : teens) {
+
+                teensPattern += l + "|";
+
+            }
+
 
         }
-
-        if (arrayName.equals("tens")) {
-
-            return tens;
-
-        }
-
-        if (arrayName.equals("teens")) {
-
-            return teens;
-
-        }
-
-        return null;
 
     }
 
+    //getter for arrays
+
+    public String getOnesPattern() {
+        return onesPattern;
+    }
+
+    public String getTensPattern() {
+        return tensPattern;
+    }
+
+    public String getTeensPattern() {
+        return teensPattern;
+    }
+
 }
+
+
+
+
+
+
 
